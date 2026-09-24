@@ -15,12 +15,6 @@ provider "azurerm" {
   features {}
 }
 
-variable "rg_count" {
-  description = "Number of resource groups to create"
-  type        = number
-  default     = 3
-}
-
 resource "random_integer" "suffix" {
   count = var.rg_count
   min   = 10000
